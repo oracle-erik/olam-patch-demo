@@ -1,0 +1,6 @@
+- name: Install the latest version of Apache and MySQL
+  ansible.builtin.package:
+    name:
+      - httpd
+      - mysql
+    state: latest
