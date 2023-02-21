@@ -2,7 +2,7 @@
 - project_name: OLAM Sample Project
 - playbook: playbook.yml
 - inventory:
-  - name: Raleigh
-    host_filter: 192.168.56.21
   - name: Atlanta
+    host_filter: 192.168.56.21
+  - name: Raleigh
     host_filter: 192.168.56.22
