@@ -1,0 +1,25 @@
+- name: Check date and time
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Set patching window
+      set_fact:
+        start_time: "18:00"
+        end_time: "02:00"
+
+    - name: Fail if not within patching window
+      command: "date '+%H:%M'"
+      register: date_local_time
+      environment:
+        TZ: US/Eastern
+      failed_when: not (start_time <= date_local_time.stdout and date_local_time.stdout < end_time)
+      when: start_time < end_time
+
+    - name: Fail if not within patching window
+      command: "date '+%H:%M'"
+      register: date_local_time
+      environment:
+        TZ: US/Eastern
+      failed_when: not (start_time <= date_local_time.stdout or date_local_time.stdout < end_time)
+      when: start_time > end_time

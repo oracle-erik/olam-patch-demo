@@ -1,0 +1,5 @@
+- name: Add EE to the controller instance
+  awx.awx.execution_environment:
+    name: "AWX EE (latest)"
+    description: "Includes pywinrm"
+    image: quay.io/ansible/awx-ee
