@@ -9,6 +9,7 @@
 
   vars_files:
     - variables.yml
+    - secrets.yml
 
   roles:
     - init/execution-environments
