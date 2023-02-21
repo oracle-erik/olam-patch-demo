@@ -1,8 +1,6 @@
 ---
 - name: Ansible Deployment
-  hosts:
-    - atlanta
-    - raleigh
+  hosts: all
 
   vars_files:
     - secrets.yml
