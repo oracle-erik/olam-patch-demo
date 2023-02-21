@@ -1,0 +1,8 @@
+---
+- project_name: OLAM Demo
+- playbook: playbook.yml
+- inventory:
+  - name: Raleigh
+    host_filter: 192.168.1.21
+  - name: Atlanta
+    host_filter: 192.168.1.22
