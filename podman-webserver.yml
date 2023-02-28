@@ -3,9 +3,8 @@
   hosts: all
 
   tasks:
-    - name: Install podman
-      ansible.builtin.package:
-        name:
-          - container-tools
+    - name: Install Podman and related tools
+      ansible.builtin.dnf:
+        name: 'container-tools:ol8'
         state: present
-
+        
