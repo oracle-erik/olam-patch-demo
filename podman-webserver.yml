@@ -1,7 +1,11 @@
+---
+- name: Run web server using Podman
+  hosts: all
 
-- name: Install podman
-  ansible.builtin.package:
-    name:
-      - container-tools
-    state: present
+  tasks:
+    - name: Install podman
+      ansible.builtin.package:
+        name:
+          - container-tools
+        state: present
 
