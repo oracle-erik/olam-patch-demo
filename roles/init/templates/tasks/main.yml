@@ -15,7 +15,7 @@
 
 - name: Create job to configure OLAM
   awx.awx.job_template:
-    name: Configure OLAM
+    name: 1 - Configure OLAM
     job_type: "run"
     organization: "Default"
     inventory: OLAM Server
