@@ -25,10 +25,10 @@
 
 - name: Create job to check the time
   awx.awx.job_template:
-    name: Time Check
+    name: Maintenance Window
     job_type: "run"
     organization: "Default"
     inventory: OLAM Server
     project: "{{ project_name }}"
-    playbook: time-check.yml
+    playbook: mx-check.yml
     state: "present"
