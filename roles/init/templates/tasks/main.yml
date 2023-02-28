@@ -1,6 +1,6 @@
 - name: Create job for each location
   awx.awx.job_template:
-    name: "{{ item.name }}"
+    name: "{{ item.name }} Datacenter"
     job_type: "run"
     organization: "Default"
     inventory: "{{ item.name }}"
