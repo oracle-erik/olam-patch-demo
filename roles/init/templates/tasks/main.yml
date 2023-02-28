@@ -30,5 +30,5 @@
     organization: "Default"
     inventory: OLAM Server
     project: "{{ project_name }}"
-    playbook: mx-check.yml
+    playbook: mx-window.yml
     state: "present"
