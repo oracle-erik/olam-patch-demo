@@ -2,9 +2,6 @@
 - name: Ansible Deployment
   hosts: all
 
-  vars_files:
-    - secrets.yml
-
   roles:
     - install_packages
 
