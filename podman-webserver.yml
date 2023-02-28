@@ -5,6 +5,18 @@
   tasks:
     - name: Install Podman and related tools
       ansible.builtin.dnf:
-        name: 'container-tools:ol8'
+        name: '@container-tools:ol8'
         state: present
-        
+      become: yes
+
+    - name: run image
+      containers.podman.podman_container:
+        name: my-ol8
+        image: ghcr.io/oracle/oraclelinux8-nginx:1.18
+        state: started
+        detach: yes
+        expose:
+          - '80'
+          - '443'
+        publish:
+          - '8080:80'
