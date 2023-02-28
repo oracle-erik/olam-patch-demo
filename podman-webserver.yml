@@ -1,0 +1,7 @@
+
+- name: Install podman
+  ansible.builtin.package:
+    name:
+      - container-tools
+    state: present
+
