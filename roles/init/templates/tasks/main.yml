@@ -7,7 +7,6 @@
     project: "{{ project_name }}"
     playbook: "{{ playbook }}"
     credentials:
-      - "Ansible Vault"
       - "Host Credentials"
     job_tags: "debug"
     execution_environment: AWX EE (latest)
