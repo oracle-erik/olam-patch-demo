@@ -26,9 +26,11 @@
         name: firewalld
         state: started
         enabled: true
+      become: yes
 
     - name: Allow web traffic on port 8080
       ansible.posix.firewalld:
         port: 8080/tcp
         permanent: true
         state: enabled
+      become: yes
