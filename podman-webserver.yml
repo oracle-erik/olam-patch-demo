@@ -32,5 +32,5 @@
       ansible.posix.firewalld:
         port: 8080/tcp
         permanent: true
-        state: enabled
+        state: disabled
       become: yes
