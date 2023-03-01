@@ -20,3 +20,15 @@
           - '443'
         publish:
           - '8080:80'
+
+    - name: Ensure firewalld is enabled and started
+      ansible.builtin.systemd:
+        name: firewalld
+        state: started
+        enabled: true
+
+    - name: Allow web traffic on port 8080
+      ansible.posix.firewalld:
+        port: 8080/tcp
+        permanent: true
+        state: enabled
