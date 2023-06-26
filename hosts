@@ -1,0 +1,15 @@
+[linux_nodes]
+150.136.146.75
+
+[linux_nodes:vars]
+ansible_username=opc
+ansible_password={{ opc_secret }}
+
+[windows_nodes]
+150.136.210.75
+
+[windows_nodes:vars]
+ansible_username=opc
+ansible_password={{ opc_secret }}
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
