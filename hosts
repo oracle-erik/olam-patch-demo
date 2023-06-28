@@ -4,5 +4,4 @@
 [windows_nodes]
 150.136.115.184
 [windows_nodes:vars]
-ansible_connection=winrm
-ansible_winrm_server_cert_validation=ignore
+ansible_connection=ssh
