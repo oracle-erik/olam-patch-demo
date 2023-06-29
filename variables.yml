@@ -5,4 +5,4 @@
   - name: Linux
     host_filter: 158.101.122.8
   - name: Windows
-    host_filter: 150.136.117.106
+    host_filter: 150.136.66.243
