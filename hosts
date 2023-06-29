@@ -1,8 +1,0 @@
-[linux_nodes]
-150.136.214.209
-
-[windows_nodes]
-150.136.42.243
-[windows_nodes:vars]
-ansible_connection=winrm
-ansible_winrm_server_cert_validation=ignore
