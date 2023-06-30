@@ -1,8 +1,0 @@
----
-- project_name: OLAM Build Party
-- playbook: playbook.yml
-- inventory:
-  - name: Linux
-    host_filter: 129.213.28.145
-  - name: Windows
-    host_filter: 158.101.123.191
