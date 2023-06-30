@@ -12,7 +12,7 @@
     - name: Run NGINX container image
       containers.podman.podman_container:
         name: my-ol8
-        image: ghcr.io/oracle/oraclelinux9-nginx:latest
+        image: ghcr.io/oracle/oraclelinux9-nginx:1.20-core
         state: started
         detach: yes
         expose:
