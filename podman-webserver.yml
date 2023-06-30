@@ -24,6 +24,8 @@
         expose:
           - '80'
           - '443'
+        publish:
+          - '80:80'
       become: yes
 
     - name: Ensure firewalld is enabled and started
@@ -33,9 +35,9 @@
         enabled: true
       become: yes
 
-    - name: Allow web traffic on port 8080
+    - name: Allow web traffic on port 80
       ansible.posix.firewalld:
-        port: 8080/tcp
+        port: 80/tcp
         permanent: true
         state: enabled
       become: yes
