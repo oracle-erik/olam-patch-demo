@@ -24,6 +24,7 @@
         expose:
           - '80'
           - '443'
+        become: yes
 
     - name: Ensure firewalld is enabled and started
       ansible.builtin.systemd:
