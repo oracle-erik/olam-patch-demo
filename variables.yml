@@ -3,6 +3,6 @@
 - playbook: playbook.yml
 - inventory:
   - name: Linux
-    host_filter: 10.0.0.16
+    host_filter: 10.0.0.101
   - name: Windows
-    host_filter: 10.0.0.126
+    host_filter: 10.0.0.81
