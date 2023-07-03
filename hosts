@@ -5,7 +5,7 @@
 ansible_python_interpreter=/usr/bin/python3
 
 [windows_nodes]
-10.0.0.79
+10.0.0.126
 [windows_nodes:vars]
 ansible_connection=winrm
 ansible_winrm_server_cert_validation=ignore
