@@ -1,5 +1,5 @@
 ---
-- project_name: OLAM Demo
+- project_name: OLAM Sample Project
 - playbook: playbook.yml
 - inventory:
   - name: Raleigh
