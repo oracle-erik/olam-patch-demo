@@ -3,6 +3,6 @@
 - playbook: playbook.yml
 - inventory:
   - name: Raleigh
-    host_filter: 192.168.1.22
+    host_filter: 192.168.56.22
   - name: Atlanta
-    host_filter: 192.168.1.23
+    host_filter: 192.168.56.23
