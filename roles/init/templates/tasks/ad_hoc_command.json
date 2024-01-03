@@ -1,0 +1,25 @@
+{
+    "name": "New User Survey",
+    "description": "Prompts OLAM user to enter an ad-hoc command.",
+    "spec": [
+        {
+            "type": "text",
+            "question_name": "Ad-hoc command",
+            "question_description": "Enter a command to execute on remote systems.",
+            "variable": "ad_hoc_command",
+            "required": true,
+            "default": ""
+        },
+        {
+            "type": "multiplechoice",
+            "question_name": "Run as root?",
+            "question_description": "",
+            "variable": "become_root",
+            "choices": ["true", "false"],
+            "min": 1,
+            "max": 1,
+            "required": true,
+            "default": "false"
+        }
+    ]
+}

@@ -59,3 +59,18 @@
     playbook: playbook.yml
     job_tags: "reposync"
     state: "present"
+
+- name: Create job that allows user to run ad-hoc commands on remote systems
+  awx.awx.job_template:
+    name: Execute commands on remote systems
+    job_type: "run"
+    organization: "Default"
+    inventory: ""
+    project: "{{ project_name }}"
+    playbook: playbook.yml
+    credentials:
+      - "Host Credentials"
+    job_tags: "ad_hoc_command"
+    state: "present"
+    survey_enabled: yes
+    survey_spec: "{{ lookup('file', 'ad_hoc_command.json') }}"

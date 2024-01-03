@@ -20,3 +20,9 @@
       tags:
         - reposync
       become: true
+
+    - name: Execute command on remote systems
+      ansible.builtin.shell: "{{ ad_hoc_command }}"
+      tags:
+        - ad_hoc_command
+      become: "{{ become_root }}"
