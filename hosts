@@ -3,7 +3,3 @@
 
 [raleigh]
 192.168.56.23
-
-[all:vars]
-ansible_user=vagrant
-ansible_password={{ admin_secret }}
