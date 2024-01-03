@@ -43,6 +43,6 @@
       - "Host Credentials"
     project: "{{ project_name }}"
     playbook: playbook.yml
-    job_tags: "debug"
+    job_tags: "dnf_update"
     state: "present"
   loop: "{{ vars.inventory }}"
