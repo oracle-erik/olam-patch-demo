@@ -65,7 +65,7 @@
     name: Execute commands on remote systems
     job_type: "run"
     organization: "Default"
-    inventory: ""
+    ask_inventory_on_launch: true
     project: "{{ project_name }}"
     playbook: playbook.yml
     credentials:
