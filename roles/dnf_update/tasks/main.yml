@@ -2,4 +2,5 @@
   ansible.builtin.dnf:
     name: "*"
     state: latest
+  tags: update_dnf
 
