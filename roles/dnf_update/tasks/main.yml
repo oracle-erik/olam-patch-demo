@@ -3,4 +3,4 @@
     name: "*"
     state: latest
   tags: dnf_update
-
+  become: true

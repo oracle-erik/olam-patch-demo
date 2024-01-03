@@ -19,3 +19,4 @@
         "reposync --delete --newest-only --repoid ol8_baseos_latest --download-metadata -p /var/yum"
       tags:
         - reposync
+      become: true
