@@ -32,3 +32,16 @@
     project: "{{ project_name }}"
     playbook: mx-window.yml
     state: "present"
+
+- name: Create job to apply updates
+  awx.awx.job_template:
+    name: Upgrade all packages
+    job_type: "run"
+    organization: "Default"
+    inventory: "{{ item.name }}"
+    credentials:
+      - "Host Credentials"
+    project: "{{ project_name }}"
+    playbook: playbook.yml
+    job_tags: "debug"
+    state: "present"
