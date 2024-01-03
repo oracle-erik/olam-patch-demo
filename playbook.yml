@@ -12,3 +12,10 @@
         msg: '{{ ansible_hostname }}'
       tags:
         - debug
+
+    - name: Run reposync on ULN mirror
+      ansible.builtin.shell: |
+        podman run --rm -t --hostname=ol-repo-sync -v /var/yum:/var/yum:z ol-repo-sync -c \
+        "reposync --delete --newest-only --repoid ol8_baseos_latest --download-metadata -p /var/yum"
+      tags:
+        - reposync
