@@ -35,7 +35,7 @@
 
 - name: Create job to apply updates
   awx.awx.job_template:
-    name: Upgrade all packages
+    name: Upgrade all packages in {{ item.name }}
     job_type: "run"
     organization: "Default"
     inventory: "{{ item.name }}"
@@ -45,3 +45,4 @@
     playbook: playbook.yml
     job_tags: "debug"
     state: "present"
+  loop: "{{ vars.inventory }}"
